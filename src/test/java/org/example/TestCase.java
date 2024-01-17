@@ -9,9 +9,8 @@ public class TestCase {
 
     @Test
     public void testEmi(){
-        double actualAmount = emiRate(1000,2,12);
-        double expectedAmount = 197.769320418271;
+        double actualAmount = emiRate(1000,4,12);
+        double expectedAmount = 85.14990419555598;
         Assertions.assertEquals(actualAmount, expectedAmount);
     }
-
 }

@@ -20,10 +20,9 @@ public class Main {
         System.out.printf("Overall debt: %.2f euros %n", overallDebt);
     }
     static double emiRate(double debtValue, double interestRate, int paybackDuration) {
-        double monthlyInterestRate = interestRate / 12;
+        double monthlyInterestRate = (interestRate/100) / 12;
         double numerator = debtValue * monthlyInterestRate;
         double denominator = 1 - Math.pow(1 + monthlyInterestRate, -paybackDuration);
         return numerator / denominator;
     }
-
 }
