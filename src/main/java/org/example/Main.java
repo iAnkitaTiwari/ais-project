@@ -12,14 +12,14 @@ public class Main {
         System.out.println("Enter the time in months: ");
         int payTime = scanner.nextInt();
 
-        double monthlyRate = calculateMonthlyRate(loanValue, interestRate, payTime);
+        double monthlyRate = emiRate(loanValue, interestRate, payTime);
         double overallDebt = (monthlyRate * payTime);
 
         System.out.printf("Monthly rate: %.2f euros %n", monthlyRate);
         System.out.println("Number of payments: " + payTime);
         System.out.printf("Overall debt: %.2f euros %n", overallDebt);
     }
-    static double calculateMonthlyRate(double debtValue, double interestRate, int paybackDuration) {
+    static double emiRate(double debtValue, double interestRate, int paybackDuration) {
         double monthlyInterestRate = interestRate / 12;
         double numerator = debtValue * monthlyInterestRate;
         double denominator = 1 - Math.pow(1 + monthlyInterestRate, -paybackDuration);

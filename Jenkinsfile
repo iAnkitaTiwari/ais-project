@@ -6,6 +6,11 @@ pipeline {
                     bat 'mvn clean compile site'
             }
         }
+        stage ('Mutation Test Stage') {
+                    steps {
+                            bat 'mvn org.pitest:pitest-maven:mutationCoverage'
+                    }
+                }
         stage ('Testing Stage') {
             steps {
                     bat 'mvn test'
