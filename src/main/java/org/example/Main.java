@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in,"UTF-8");
         System.out.println("Enter the Amount: ");
         int loanValue = scanner.nextInt();
         System.out.println("Enter the Interest rate: ");
